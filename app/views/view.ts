@@ -3,9 +3,14 @@ export abstract class View<T> {
     private scape = false;
 
     constructor(selector: string, scape?: boolean) {
-        this.element = document.querySelector(selector);
-        if (scape)
-            this.scape = scape;
+        const element = document.querySelector(selector);
+        if (element) {
+            this.element = element as HTMLElement;
+            if (scape)
+                this.scape = scape;
+        } else {
+            throw Error(`Seletor ${selector} não existe no DOM.`);
+        }
     }
 
     protected abstract template(model: T): string;

@@ -11,3 +11,5 @@ Typescript fornece bastantes recursos de OO como herança e classe abstrata. Al�
 O modificador de acesso padrão é o public, ou seja, quando não colocamos nada significa é public.
 
 No contexto de herança, a classe filha pode alterar o tipo do modificador de acesso de um método abstrato.
+
+Cast no typescript pode ser feito ```<HTMLInputElement>``` antes da chamada ou ```as HTMLInputElement``` após a chamada.
